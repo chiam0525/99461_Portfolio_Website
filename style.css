@@ -25,11 +25,9 @@ body{
 header {
     background: transparent;
     padding: 0px 20px;
-    /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
 }
 
 .top_bar {
-    /*padding: 20px;*/
     height: 120px;
     display: flex;
     justify-content: space-between;
@@ -77,6 +75,7 @@ header {
     z-index: 1000;
     margin-top: 20px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 #button_text {
@@ -89,7 +88,7 @@ header {
     right: 0;
     z-index: 999;
 
-    width: 35%;
+    width: 65%;
     height: 100%;
     background-color: azure;
     padding-top: 60px;
