@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const backTopBtn = document.getElementById('back_top_btn');
     const scrollThreshold = 200;
 
+    const projectCards = document.querySelectorAll('.project_card');
+
     let imageIndex = 1;
 
     if (overlay && overlay.classList.contains('is_active')) {
@@ -100,6 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (backTopBtn) {
         backTopBtn.onclick = window.scrollToTop;
     }
+
+    projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-expanded');
+
+            projectCards.forEach(otherCard => {
+                if (otherCard !== card && otherCard.classList.contains('is-expanded')) {
+                    otherCard.classList.remove('is-expanded');
+                }
+            });
+        });
+    });
 })
 
 
